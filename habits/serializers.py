@@ -2,10 +2,23 @@ from rest_framework import serializers
 from .models import Habit
 
 class HabitSerializer(serializers.ModelSerializer):
+    related_habit = serializers.PrimaryKeyRelatedField(
+        queryset=Habit.objects.none(),  # временно пустой, будет заполнен в __init__
+        required=False,
+        allow_null=True
+    )
+
     class Meta:
         model = Habit
         fields = '__all__'
         read_only_fields = ['user', 'last_sent']
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        request = self.context.get('request')
+        if request and request.user.is_authenticated:
+            # Ограничиваем выбор только привычками текущего пользователя
+            self.fields['related_habit'].queryset = Habit.objects.filter(user=request.user)
 
     def validate(self, data):
         related_habit = data.get('related_habit')
@@ -32,4 +45,3 @@ class HabitSerializer(serializers.ModelSerializer):
 
         return data
 
-    

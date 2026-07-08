@@ -3,12 +3,12 @@ from rest_framework.decorators import action
 from rest_framework.response import Response
 from .models import Habit
 from .serializers import HabitSerializer
-from .permissions import IsOwnerOrReadOnly
+from .permissions import IsOwner
 from .paginators import HabitPagination  
 
 class HabitViewSet(viewsets.ModelViewSet):
     serializer_class = HabitSerializer
-    permission_classes = [permissions.IsAuthenticated, IsOwnerOrReadOnly]
+    permission_classes = [permissions.IsAuthenticated, IsOwner]
     pagination_class = HabitPagination
 
     def get_queryset(self):
