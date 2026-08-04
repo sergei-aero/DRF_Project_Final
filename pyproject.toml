@@ -1,31 +1,33 @@
-[tool.poetry]
+[project]
 name = "drf-project-final"
 version = "0.1.0"
 description = ""
-authors = ["sergei-aero <pavlov.aero@gmail.com>"]
+authors = [
+    {name = "sergei-aero",email = "pavlov.aero@gmail.com"}
+]
 readme = "README.md"
-package-mode = false
+requires-python = ">=3.12,<4.0"
+dependencies = [
+    "django (>=6.0.6,<7.0.0)",
+    "djangorestframework (>=3.17.1,<4.0.0)",
+    "djangorestframework-simplejwt (>=5.5.1,<6.0.0)",
+    "drf-yasg (>=1.21.15,<2.0.0)",
+    "django-cors-headers (>=4.9.0,<5.0.0)",
+    "psycopg2-binary (>=2.9.12,<3.0.0)",
+    "python-dotenv (>=1.2.2,<2.0.0)",
+    "celery (>=5.6.3,<6.0.0)",
+    "redis (>=8.0.1,<9.0.0)",
+    "django-celery-beat (>=2.9.0,<3.0.0)"
+]
 
-[tool.poetry.dependencies]
-python = ">=3.12,<4.0"
-django = ">=6.0.6,<7.0.0"
-djangorestframework = ">=3.17.1,<4.0.0"
-djangorestframework-simplejwt = ">=5.5.1,<6.0.0"
-drf-yasg = ">=1.21.15,<2.0.0"
-django-cors-headers = ">=4.9.0,<5.0.0"
-psycopg2-binary = ">=2.9.12,<3.0.0"
-python-dotenv = ">=1.2.2,<2.0.0"
-celery = ">=5.6.3,<6.0.0"
-redis = ">=8.0.1,<9.0.0"
-django-celery-beat = ">=2.9.0,<3.0.0"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
 
-
-
 [dependency-groups]
 dev = [
-    "flake8 (>=7.3.0,<8.0.0)"
+    "black (>=26.5.1,<27.0.0)",
+    "flake8 (>=7.3.0,<8.0.0)",
+    "autopep8 (>=2.3.2,<3.0.0)"
 ]
