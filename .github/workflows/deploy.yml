@@ -49,7 +49,7 @@ jobs:
         run: |
           pip install poetry
           poetry config virtualenvs.create false
-          poetry install --without dev
+          poetry install --without dev --no-root
       - name: Run tests
         env:
           DB_NAME: drf_project_db
