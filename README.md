@@ -301,3 +301,4 @@ GitHub: sergei-aero
 git clone git@github.com:sergei-aero/DRF_Project_Final.git
 cd DRF_Project_Final
 >>>>>>> master
+<!-- Trigger deploy: 2026-08-04 -->
