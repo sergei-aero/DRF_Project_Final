@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # DRF Project Final — Платформа автоматических рассылок
 
 [![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)](https://python.org)
@@ -59,7 +58,7 @@
 - Poetry
 - PostgreSQL 15 (локально или через Docker)
 - Redis 8.0 (локально или через Docker)
-=======
+
 # Трекер полезных привычек
 
 Проект представляет собой бэкенд-часть SPA-приложения для отслеживания полезных привычек, разработанный на Django REST Framework.
@@ -85,12 +84,10 @@
 - django-cors-headers
 
 ## Установка и запуск
->>>>>>> master
 
 ### 1. Клонирование репозитория
 
 ```bash
-<<<<<<< HEAD
 git clone https://github.com/sergei-aero/DRF_Project_Final.git
 cd DRF_Project_Final
 git checkout DRF_2XFinal   # или ваша рабочая ветка
@@ -297,8 +294,6 @@ Email: pavlov.aero@gmail.com
 GitHub: sergei-aero
 
 ⭐ Если проект оказался полезным, поставьте звезду на GitHub!
-=======
 git clone git@github.com:sergei-aero/DRF_Project_Final.git
 cd DRF_Project_Final
->>>>>>> master
 <!-- Trigger deploy: 2026-08-04 -->
