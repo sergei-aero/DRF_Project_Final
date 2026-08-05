@@ -18,10 +18,17 @@ dependencies = [
     "celery (>=5.6.3,<6.0.0)",
     "redis (>=8.0.1,<9.0.0)",
     "django-celery-beat (>=2.9.0,<3.0.0)",
-    "requests (>=2.34.2,<3.0.0)"
+    "gunicorn (>=22.0.0,<23.0.0)"
 ]
 
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "black (>=26.5.1,<27.0.0)",
+    "flake8 (>=7.3.0,<8.0.0)",
+    "autopep8 (>=2.3.2,<3.0.0)"
+]
